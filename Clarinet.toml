@@ -1,0 +1,28 @@
+[project]
+name = 'Token-mortgage'
+description = ''
+authors = []
+telemetry = true
+cache_dir = '.\.cache'
+requirements = []
+[contracts.sip-010-trait-ft-standard]
+path = 'contracts/sip-010-trait-ft-standard.clar'
+clarity_version = 3
+epoch = 'latest'
+
+[contracts.Token-mortgage]
+path = 'contracts/Token-mortgage.clar'
+clarity_version = 3
+epoch = 'latest'
+[repl.analysis]
+passes = ['check_checker']
+
+[repl.analysis.check_checker]
+strict = false
+trusted_sender = false
+trusted_caller = false
+callee_filter = false
+
+[repl.remote_data]
+enabled = false
+api_url = 'https://api.hiro.so'
